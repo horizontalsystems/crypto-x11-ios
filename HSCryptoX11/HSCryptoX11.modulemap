@@ -1,0 +1,10 @@
+framework module HSCryptoX11 {
+    umbrella header "HSCryptoX11.h"
+
+    export *
+    module * { export * }
+
+    explicit module Private {
+        header "CryptoX11Private.h"
+    }
+}
