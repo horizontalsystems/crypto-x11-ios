@@ -11,9 +11,15 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc = true
   spec.source = { git: 'https://github.com/horizontalsystems/crypto-x11-ios.git', tag: "#{spec.version}" }
-  spec.source_files = 'HSCryptoX11/**/*.{h,m,swift}'
+  spec.source_files = '{HSCryptoX11,Libraries}/**/*.{h,m,swift}'
+  spec.module_map = 'HSCryptoX11/HSCryptoX11.modulemap'
   spec.ios.deployment_target = '10.0'
   spec.swift_version = '4.1'
 
-  s.framework = 'Foundation', 'SystemConfiguration'
+  spec.pod_target_xcconfig = { 'SWIFT_WHOLE_MODULE_OPTIMIZATION' => 'YES',
+                               'APPLICATION_EXTENSION_API_ONLY' => 'YES',
+                               'SWIFT_INCLUDE_PATHS' => '${PODS_ROOT}/Libraries',
+                               'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Libraries/x11"'}
+
+  spec.framework = 'Foundation', 'SystemConfiguration'
 end

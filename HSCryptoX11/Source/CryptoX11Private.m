@@ -25,18 +25,18 @@
 
 #import "CryptoX11Private.h"
 
-#import "../x11/BigIntTypes.h"
-#import "../x11/Blake.h"
-#import "../x11/Bmw.h"
-#import "../x11/CubeHash.h"
-#import "../x11/Groestl.h"
-#import "../x11/Echo.h"
-#import "../x11/Jh.h"
-#import "../x11/Keccak.h"
-#import "../x11/Luffa.h"
-#import "../x11/Shavite.h"
-#import "../x11/Simd.h"
-#import "../x11/Skein.h"
+#import <BigIntTypes.h>
+#import <Blake.h>
+#import <Bmw.h>
+#import <CubeHash.h>
+#import <Groestl.h>
+#import <Echo.h>
+#import <Jh.h>
+#import <Keccak.h>
+#import <Luffa.h>
+#import <Shavite.h>
+#import <Simd.h>
+#import <Skein.h>
 
 @implementation _Hash
 
