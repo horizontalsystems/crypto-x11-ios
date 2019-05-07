@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+#import "UIKit/UIKit.h"
 
 //! Project version number for HSCryptoKit.
 FOUNDATION_EXPORT double HSCryptoKitVersionNumber;
