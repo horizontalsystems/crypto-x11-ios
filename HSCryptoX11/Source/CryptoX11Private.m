@@ -38,7 +38,7 @@
 #import "Simd.h"
 #import "Skein.h"
 
-@implementation _Hash
+@implementation CryptoX11Hash
 
 + (UInt256)_x11:(NSData *)data {
     NSData *copy = [data copy];
@@ -103,7 +103,7 @@
 }
 
 + (NSData *)x11:(NSData *)data {
-    return [_Hash dataWithUInt256: [_Hash _x11: data]];
+    return [CryptoX11Hash dataWithUInt256: [CryptoX11Hash _x11: data]];
 }
 
 
@@ -115,7 +115,7 @@
     sph_blake512(&ctx_blake, data.bytes, data.length);
     sph_blake512_close(&ctx_blake, &blakeData);
 
-    return [_Hash dataWithUInt512:blakeData];
+    return [CryptoX11Hash dataWithUInt512:blakeData];
 }
 
 + (NSData *)bmw512: (NSData *)data {
@@ -126,7 +126,7 @@
     sph_bmw512(&ctx_bmw, data.bytes, data.length);
     sph_bmw512_close(&ctx_bmw, &bmwData);
 
-    return [_Hash dataWithUInt512:bmwData];
+    return [CryptoX11Hash dataWithUInt512:bmwData];
 }
 
 + (NSData *)groestl512: (NSData *)data {
@@ -137,7 +137,7 @@
     sph_groestl512(&ctx_groestl, data.bytes, data.length);
     sph_groestl512_close(&ctx_groestl, &groestlData);
 
-    return [_Hash dataWithUInt512:groestlData];
+    return [CryptoX11Hash dataWithUInt512:groestlData];
 }
 
 + (NSData *)skein512: (NSData *)data {
@@ -148,7 +148,7 @@
     sph_skein512(&ctx_skein, data.bytes, data.length);
     sph_skein512_close(&ctx_skein, &skeinData);
 
-    return [_Hash dataWithUInt512:skeinData];
+    return [CryptoX11Hash dataWithUInt512:skeinData];
 }
 
 + (NSData *)jh512: (NSData *)data {
@@ -158,7 +158,7 @@
     sph_jh512(&ctx_jh, data.bytes, data.length);
     sph_jh512_close(&ctx_jh, &jhData);
 
-    return [_Hash dataWithUInt512:jhData];
+    return [CryptoX11Hash dataWithUInt512:jhData];
 }
 
 + (NSData *)keccak512: (NSData *)data {
@@ -169,7 +169,7 @@
     sph_keccak512(&ctx_keccak, data.bytes, data.length);
     sph_keccak512_close(&ctx_keccak, &keccakData);
 
-    return [_Hash dataWithUInt512:keccakData];
+    return [CryptoX11Hash dataWithUInt512:keccakData];
 }
 
 + (NSData *)luffa512: (NSData *)data {
@@ -180,7 +180,7 @@
     sph_luffa512(&ctx_luffa, data.bytes, data.length);
     sph_luffa512_close(&ctx_luffa, &luffaData);
 
-    return [_Hash dataWithUInt512:luffaData];
+    return [CryptoX11Hash dataWithUInt512:luffaData];
 }
 
 + (NSData *)cubehash512: (NSData *)data {
@@ -191,7 +191,7 @@
     sph_cubehash512(&ctx_cubehash, data.bytes, data.length);
     sph_cubehash512_close(&ctx_cubehash, &cubehashData);
 
-    return [_Hash dataWithUInt512:cubehashData];
+    return [CryptoX11Hash dataWithUInt512:cubehashData];
 }
 
 + (NSData *)shavite512: (NSData *)data {
@@ -202,7 +202,7 @@
     sph_shavite512(&ctx_shavite, data.bytes, data.length);
     sph_shavite512_close(&ctx_shavite, &shaviteData);
 
-    return [_Hash dataWithUInt512:shaviteData];
+    return [CryptoX11Hash dataWithUInt512:shaviteData];
 }
 
 + (NSData *)simd512: (NSData *)data {
@@ -213,7 +213,7 @@
     sph_simd512(&ctx_simd, data.bytes, data.length);
     sph_simd512_close(&ctx_simd, &simdData);
 
-    return [_Hash dataWithUInt512:simdData];
+    return [CryptoX11Hash dataWithUInt512:simdData];
 }
 
 + (NSData *)echo512: (NSData *)data {
@@ -224,7 +224,7 @@
     sph_echo512(&ctx_echo, data.bytes, data.length);
     sph_echo512_close(&ctx_echo, &echoData);
 
-    return [_Hash dataWithUInt512:echoData];
+    return [CryptoX11Hash dataWithUInt512:echoData];
 }
 
 + (NSData *)dataWithUInt512:(UInt512)n {

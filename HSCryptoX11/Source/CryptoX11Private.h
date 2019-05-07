@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface _Hash : NSObject
+@interface CryptoX11Hash : NSObject
 
 + (NSData *)x11:(NSData *)data;
 + (NSData *)blake512:(NSData *)data;
