@@ -1,6 +1,7 @@
 Pod::Spec.new do |spec|
-  spec.name             = 'HSCryptoX11'
-  spec.version          = '1.0.0'
+  spec.name             = 'CryptoX11.swift'
+  spec.module_name      = 'HSCryptoX11'
+  spec.version          = '1.0'
   spec.summary          = 'X11 hash functions Swift adapter.'
 
   spec.homepage         = 'https://github.com/horizontalsystems/crypto-x11-ios'
