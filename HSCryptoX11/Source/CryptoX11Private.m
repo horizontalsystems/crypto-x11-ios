@@ -25,7 +25,6 @@
 
 #import "CryptoX11Private.h"
 
-#import <BigIntTypes.h>
 #import <Blake.h>
 #import <Bmw.h>
 #import <CubeHash.h>
@@ -39,6 +38,23 @@
 #import <Skein.h>
 
 @implementation CryptoX11Hash
+
+typedef union _UInt512 {
+    uint8_t u8[512/8];
+    uint16_t u16[512/16];
+    uint32_t u32[512/32];
+    uint64_t u64[512/64];
+} UInt512;
+
+typedef union _UInt256 {
+    uint8_t u8[256/8];
+    uint16_t u16[256/16];
+    uint32_t u32[256/32];
+    uint64_t u64[256/64];
+} UInt256;
+
+
+#define UINT512_ZERO ((UInt512) { .u64 = { 0, 0, 0, 0, 0, 0, 0, 0 } })
 
 + (UInt256)_x11:(NSData *)data {
     NSData *copy = [data copy];

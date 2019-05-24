@@ -19,9 +19,10 @@ Pod::Spec.new do |spec|
 
   spec.pod_target_xcconfig = { 'SWIFT_WHOLE_MODULE_OPTIMIZATION' => 'YES',
                                'APPLICATION_EXTENSION_API_ONLY' => 'YES',
-                               'SWIFT_INCLUDE_PATHS' => '${PODS_ROOT}/Libraries',
-                               'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Libraries/x11"'}
+                               'SWIFT_INCLUDE_PATHS' => '${PODS_ROOT}/CryptoX11.swift/Libraries',
+                               'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/CryptoX11.swift/Libraries/x11' }
 
   spec.framework = 'Foundation', 'SystemConfiguration'
   spec.preserve_paths = ['Libraries']
+
 end
