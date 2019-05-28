@@ -184,7 +184,7 @@
 				TargetAttributes = {
 					3A3B598621678313001C5E99 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					3A58C170222E43B8008AA6D7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -198,6 +198,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3A3B597D21678313001C5E99;
 			productRefGroup = 3A3B598821678313001C5E99 /* Products */;
