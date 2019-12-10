@@ -1,5 +1,4 @@
 import Foundation
-import HSCryptoX11.Private
 
 public struct CryptoX11 {
 
