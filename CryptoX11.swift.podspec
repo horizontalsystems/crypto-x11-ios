@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'CryptoX11.swift'
-  spec.module_name      = 'HSCryptoX11'
+  spec.module_name      = 'CryptoX11'
   spec.version          = '1.1'
   spec.summary          = 'X11 hash functions Swift adapter.'
 
@@ -17,7 +17,6 @@ Pod::Spec.new do |spec|
   spec.source = { git: 'https://github.com/horizontalsystems/crypto-x11-ios.git', tag: "#{spec.version}" }
   spec.source_files = 'HSCryptoX11/**/*.{h,m,swift}'
 
-  spec.header_dir = 'CryptoX11'
   spec.preserve_paths = ['Libraries']
   spec.framework = 'Foundation', 'SystemConfiguration'
 
